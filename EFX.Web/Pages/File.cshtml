@@ -1,0 +1,41 @@
+﻿@page
+@model EFX.Web.Pages.FileModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>File</title>
+    <script type="text/javascript" src="~/scripts/jquery.js"></script>
+    <script type="text/javascript">
+        function doJsonPatch() {
+            let v = $("#taJson").val();
+            let d = JSON.parse(v);
+            $.ajax({
+                url: '/api/incidents/1',
+                data: JSON.stringify(d),
+                type: 'PATCH',
+                contentType: 'application/merge-patch+json',
+                processData: false,
+                dataType: 'json'
+            });
+        }
+    </script>
+</head>
+<body>
+    <textarea id="taJson" rows="10" cols="80">
+{
+    "EventDescription": "Jian Zhou",
+    "Details": {
+        "injuryNatures": "Cannot lose weight"
+    }
+}
+    </textarea>
+    <hr/>
+    <button type="button" onclick="doJsonPatch()">Update</button>
+</body>
+</html>
