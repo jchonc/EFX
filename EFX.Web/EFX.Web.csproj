@@ -16,4 +16,8 @@
     <ProjectReference Include="..\EFX.Data\EFX.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>
