@@ -1,0 +1,28 @@
+﻿@page
+@model EFX.Web.Pages.FormModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+    <script src="@Url.Content("~/scripts/meta-form.js")"></script> 
+</head>
+<body>
+    <div id="dr1"></div>
+    <script type="text/javascript">
+        var ReactDOM = window.formEngine.ReactDOM;
+        var React = window.formEngine.React;
+        var MetaForm = window.formEngine.MetaForm;
+        var MetaField = window.formEngine.MetaField;
+    </script>
+    <script src="@Url.Content("~/scripts/form1.jsx")"></script>
+    <script type="text/javascript">
+        ReactDOM.hydrate(React.createElement(Form1), document.getElementById("dr1"));
+    </script>
+</body>
+</html>

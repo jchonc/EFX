@@ -40,7 +40,8 @@ namespace EFX.Web
                 // See http://reactjs.net/ for more information. Example:
                 config
                   .AddScript("~/scripts/Parts.jsx")
-                  .AddScript("~/scripts/form.jsx");
+                  .AddScript("~/scripts/form.jsx")
+                  .AddScript("~/scripts/form1.jsx");
                 //  .AddScript("~/Scripts/Second.jsx");
 
                 // If you use an external build too (for example, Babel, Webpack,
