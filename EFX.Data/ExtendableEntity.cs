@@ -70,13 +70,6 @@ namespace EFX.Data
 
         public void Validate()
         {
-            int moduleId = 1;
-            string entityName = "Incident";
-
-            var metaInfo = FetchMetaTree(moduleId, entityName);
-
-
-
         }
 
 
